@@ -142,6 +142,9 @@
         .font-size-24px{
             font-size: 24px;
         }
+        .hidden{
+            display: none;
+        }
         
         </style>
      <title>Gitflow</title>    
@@ -156,7 +159,7 @@
                         <div class="line white"></div>
                     </a>
                 </div>
-                <div class="link">
+                <div class="link hidden">
                     <a class="white font-size-24px" href="#">Homepage</a>
                     <a class="white font-size-24px" href="#">About</a>
                     <a class="white font-size-24px" href="#">Contacts</a>      
@@ -175,6 +178,18 @@
                         
                  </div>         	
         </div>
-    </body>
+        </div>
+        <script type="text/javascript">
+            let hamburger=document.querySelector(".hamburger");
+            let link= document.querySelector(".link")
+            hamburger.addEventListener("click", function(event){
+                if (link.classList.contains("hidden")) {
+                    link.classList.toggle("hidden")
+                }else{
+                    link.classList.add("hidden")
+                }
+            })
+            </script>
+        </body>
 
 </html>
